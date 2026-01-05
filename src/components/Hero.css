@@ -1,0 +1,33 @@
+/* Main Content */
+.hero-section {
+    background: transparent;
+    padding: 0;
+    color: #ffffff;
+    text-align: center;
+    display: none;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
