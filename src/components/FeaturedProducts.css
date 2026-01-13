@@ -1,0 +1,120 @@
+.featured-section {
+  padding: 60px 30px;
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.featured-slider-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.featured-product-card {
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.featured-product-card:hover {
+  transform: scale(1.05);
+}
+
+.featured-image-wrapper {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featured-product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.featured-product-card:hover .featured-product-image {
+  transform: scale(1.1);
+}
+
+.featured-product-name {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: white;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featured-price-section {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.featured-original-price {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.featured-discounted-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ff8c00;
+}
+
+/* Slick slider customization */
+.featured-slider-container .slick-slide {
+  padding: 0 10px;
+}
+
+.featured-slider-container .slick-next,
+.featured-slider-container .slick-prev {
+  background-color: #ff8c00;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+}
+
+.featured-slider-container .slick-next:before,
+.featured-slider-container .slick-prev:before {
+  color: white;
+  font-size: 20px;
+}
+
+.featured-slider-container .slick-next:hover,
+.featured-slider-container .slick-prev:hover {
+  background-color: #e67e00;
+}
+
+@media (max-width: 768px) {
+  .featured-section {
+    padding: 40px 20px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .featured-image-wrapper {
+    height: 180px;
+  }
+}

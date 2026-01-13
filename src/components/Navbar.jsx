@@ -1,22 +1,25 @@
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 import "./Navbar.css";
 import LoginForm from "./LoginForm";
 import SignupForm from "./SignupForm";
-import CartModal from "./CartModal";
 
 function Navbar() {
   const [showSearch, setShowSearch] = useState(false);
   const [hoverProfile, setHoverProfile] = useState(false);
   const [showLoginForm, setShowLoginForm] = useState(false);
   const [showSignupForm, setShowSignupForm] = useState(false);
-  const [showCartModal, setShowCartModal] = useState(false);
+  const { getCartCount } = useCart();
+  const navigate = useNavigate();
+  const cartCount = getCartCount();
 
   const handleLogoClick = () => {
     setShowSearch(false);
     setHoverProfile(false);
     setShowLoginForm(false);
     setShowSignupForm(false);
-    setShowCartModal(false);
+    navigate('/');
   };
 
   return (
@@ -37,9 +40,10 @@ function Navbar() {
           {/* Cart Icon */}
           <div 
             className="nav-icon-wrapper"
-            onClick={() => setShowCartModal(true)}
+            onClick={() => navigate('/cart')}
           >
             🛒
+            {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
             <span className="tooltip">Cart</span>
           </div>
 
@@ -106,11 +110,6 @@ function Navbar() {
             setShowLoginForm(true);
           }}
         />
-      )}
-
-      {/* Cart Modal */}
-      {showCartModal && (
-        <CartModal onClose={() => setShowCartModal(false)} />
       )}
     </>
   );

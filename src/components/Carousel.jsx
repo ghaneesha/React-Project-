@@ -9,31 +9,31 @@ export default function Carousel() {
       id: 1,
       productName: 'Sony WH-1000XM5',
       description: 'Premium noise-cancelling wireless headphones with crystal-clear sound',
-      originalPrice: '399.99',
-      discountedPrice: '299.99',
+      originalPrice: '29,999',
+      discountedPrice: '22,499',
       discount: '25% OFF',
-      image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop',
       brand: 'Sony'
     },
     {
       id: 2,
-      productName: 'Premium Earbuds',
-      description: 'Experience immersive sound quality with advanced noise cancellation',
-      originalPrice: '199.99',
-      discountedPrice: '149.99',
-      discount: '25% OFF',
-      image: 'https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400&h=400&fit=crop',
-      brand: 'Brand'
+      productName: 'Apple AirPods Pro',
+      description: 'Premium earbuds with active noise cancellation and spatial audio',
+      originalPrice: '21,900',
+      discountedPrice: '18,999',
+      discount: '13% OFF',
+      image: 'https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500&h=500&fit=crop',
+      brand: 'Apple'
     },
     {
       id: 3,
-      productName: 'Wireless Headphones',
-      description: 'Long battery life and exceptional comfort for all-day wear',
-      originalPrice: '279.99',
-      discountedPrice: '189.99',
-      discount: '32% OFF',
-      image: 'https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=400&h=400&fit=crop',
-      brand: 'Brand'
+      productName: 'OnePlus Buds Pro',
+      description: 'True wireless earphones with superior sound and comfort',
+      originalPrice: '12,999',
+      discountedPrice: '9,999',
+      discount: '23% OFF',
+      image: 'https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=500&h=500&fit=crop',
+      brand: 'OnePlus'
     }
   ];
 
@@ -71,8 +71,8 @@ export default function Carousel() {
               <p className="product-description">{slide.description}</p>
               
               <div className="price-section">
-                <span className="original-price">${slide.originalPrice}</span>
-                <span className="discounted-price">${slide.discountedPrice}</span>
+                <span className="original-price">₹{slide.originalPrice}</span>
+                <span className="discounted-price">₹{slide.discountedPrice}</span>
                 <span className="discount-badge">{slide.discount}</span>
               </div>
 
