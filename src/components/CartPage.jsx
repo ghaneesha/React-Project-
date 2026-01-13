@@ -12,25 +12,12 @@ export default function CartPage() {
   const totalDiscount = getTotalDiscount();
   const itemCount = getCartCount();
 
-  const formattedOriginal = totalOriginalPrice.toLocaleString('en-IN', {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  });
-
-  const formattedDiscounted = totalDiscountedPrice.toLocaleString('en-IN', {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  });
-
-  const formattedDiscount2 = totalDiscount.toLocaleString('en-IN', {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  });
-
-  const formattedTotal = totalDiscountedPrice.toLocaleString('en-IN', {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  });
+  const formatPrice = (price) => {
+    return price.toLocaleString('en-IN', {
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    });
+  };
 
   if (cartItems.length === 0) {
     return (
@@ -49,41 +36,43 @@ export default function CartPage() {
 
   return (
     <div className="cart-page-container">
-      <h1 className="cart-title">Shopping Cart</h1>
+      <div className="cart-header">
+        <h1 className="cart-title">Cart</h1>
+      </div>
 
       <div className="cart-content">
         {/* Left Side - Cart Items */}
         <div className="cart-items-section">
-          {cartItems.map((item) => (
-            <CartItem key={item.id} item={item} />
-          ))}
+          <div className="cart-items-wrapper">
+            {cartItems.map((item) => (
+              <CartItem key={item.id} item={item} />
+            ))}
+          </div>
         </div>
 
         {/* Right Side - Order Summary */}
         <div className="order-summary-section">
           <div className="summary-box">
-            <h2 className="summary-title">Order Summary ({itemCount} items)</h2>
+            <h2 className="summary-title">Order Summary ( {itemCount} items )</h2>
 
             <div className="summary-row">
               <span className="summary-label">Original Price</span>
-              <span className="summary-value">₹{formattedOriginal}</span>
+              <span className="summary-value">₹{formatPrice(totalOriginalPrice)}</span>
             </div>
 
             <div className="summary-row discount-row">
-              <span className="summary-label">Discount Price</span>
-              <span className="summary-value discount-value">- ₹{formattedDiscount2}</span>
+              <span className="summary-label">Discount</span>
+              <span className="discount-value">- ₹{formatPrice(totalDiscount)}</span>
             </div>
 
             <div className="summary-row delivery-row">
               <span className="summary-label">Delivery</span>
-              <span className="summary-value delivery-value">Free</span>
+              <span className="delivery-value">Free</span>
             </div>
 
-            <div className="summary-divider"></div>
-
             <div className="summary-row total-row">
-              <span className="summary-label total-label">Total Price</span>
-              <span className="summary-value total-value">₹{formattedTotal}</span>
+              <span className="total-label">Total Price</span>
+              <span className="total-value">₹{formatPrice(totalDiscountedPrice)}</span>
             </div>
 
             <button className="checkout-btn">Checkout</button>

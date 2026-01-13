@@ -4,113 +4,129 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.85);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 2000;
+  backdrop-filter: blur(5px);
 }
 
 .login-modal {
-  background-color: #333333;
-  border-radius: 8px;
-  padding: 30px;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 40px;
   width: 100%;
-  max-width: 400px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  max-width: 420px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   position: relative;
+  border: 1px solid #2a2a2a;
 }
 
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 15px;
+  right: 20px;
   background: none;
   border: none;
-  font-size: 28px;
-  color: white;
+  font-size: 24px;
+  color: #999;
   cursor: pointer;
   padding: 0;
+  transition: color 0.3s;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .close-btn:hover {
-  color: #ff8c00;
+  color: white;
 }
 
 .login-title {
   color: white;
-  font-size: 24px;
-  margin-bottom: 15px;
-  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: left;
 }
 
 .signup-text {
-  color: white;
+  color: #999;
   font-size: 14px;
-  text-align: center;
-  margin-bottom: 20px;
+  text-align: left;
+  margin-bottom: 30px;
 }
 
 .create-account {
-  color: #ff8c00;
+  color: #e60000;
   cursor: pointer;
   font-weight: 600;
+  transition: color 0.3s;
 }
 
 .create-account:hover {
+  color: #ff0000;
   text-decoration: underline;
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 16px;
+  margin-bottom: 25px;
 }
 
 .login-input {
-  padding: 12px;
-  border: 1px solid #555555;
-  border-radius: 4px;
-  background-color: #444444;
+  padding: 14px 16px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background-color: #0a0a0a;
   color: white;
   font-size: 14px;
   outline: none;
-  transition: border-color 0.3s;
+  transition: all 0.3s;
 }
 
 .login-input:focus {
-  border-color: #ff8c00;
+  border-color: #e60000;
+  background-color: #1a1a1a;
 }
 
 .login-input::placeholder {
-  color: #999999;
+  color: #666;
 }
 
 .login-button {
-  padding: 12px;
-  background-color: #ff8c00;
+  padding: 14px;
+  background-color: #e60000;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s;
+  margin-top: 8px;
+  text-transform: capitalize;
 }
 
 .login-button:hover {
-  background-color: #e67e00;
+  background-color: #cc0000;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(230, 0, 0, 0.3);
 }
 
 .divider {
-  color: #999999;
+  color: #666;
   text-align: center;
-  font-size: 12px;
-  margin: 20px 0;
+  font-size: 13px;
+  margin: 25px 0;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 .divider::before,
@@ -118,24 +134,23 @@
   content: '';
   flex: 1;
   height: 1px;
-  background-color: #555555;
+  background-color: #333;
 }
 
 .social-login {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 12px;
 }
 
 .social-btn {
-  width: 40px;
-  height: 40px;
-  border: 1px solid #555555;
-  border-radius: 50%;
-  background-color: #444444;
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
   color: white;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s;
   display: flex;
@@ -143,35 +158,47 @@
   justify-content: center;
 }
 
-.social-btn:hover {
-  border-color: #ff8c00;
-  background-color: #ff8c00;
-}
-
 .social-btn.facebook {
   background-color: #1877f2;
-  border-color: #1877f2;
 }
 
 .social-btn.facebook:hover {
   background-color: #165bcf;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3);
 }
 
 .social-btn.google {
   background-color: #ea4335;
-  border-color: #ea4335;
 }
 
 .social-btn.google:hover {
   background-color: #d33527;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(234, 67, 53, 0.3);
 }
 
 .social-btn.twitter {
-  background-color: #000000;
-  border-color: #555555;
+  background-color: #1d9bf0;
 }
 
 .social-btn.twitter:hover {
-  background-color: #1d9bf0;
-  border-color: #1d9bf0;
+  background-color: #1a8cd8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(29, 155, 240, 0.3);
+}
+
+@media (max-width: 480px) {
+  .login-modal {
+    padding: 30px 25px;
+    max-width: 90%;
+  }
+
+  .login-title {
+    font-size: 24px;
+  }
+
+  .social-login {
+    flex-direction: column;
+  }
 }

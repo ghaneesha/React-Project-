@@ -10,7 +10,7 @@ export default function Advantages() {
     },
     {
       id: 2,
-      icon: "✓",
+      icon: "🛡️",
       title: "Brand Warranty",
       description: "100% Original products"
     },
@@ -22,9 +22,9 @@ export default function Advantages() {
     },
     {
       id: 4,
-      icon: "🔒",
+      icon: "💳",
       title: "Secure Payments",
-      description: "SSL/Secure certificate"
+      description: "SSL / Secure certificate"
     }
   ];
 
@@ -36,8 +36,10 @@ export default function Advantages() {
         {advantages.map((advantage) => (
           <div key={advantage.id} className="advantage-card">
             <div className="advantage-icon">{advantage.icon}</div>
-            <h3 className="advantage-title">{advantage.title}</h3>
-            <p className="advantage-description">{advantage.description}</p>
+            <div className="advantage-content">
+              <h3 className="advantage-title">{advantage.title}</h3>
+              <p className="advantage-description">{advantage.description}</p>
+            </div>
           </div>
         ))}
       </div>

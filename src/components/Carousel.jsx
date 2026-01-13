@@ -7,33 +7,27 @@ export default function Carousel() {
   const slides = [
     {
       id: 1,
-      productName: 'Sony WH-1000XM5',
-      description: 'Premium noise-cancelling wireless headphones with crystal-clear sound',
-      originalPrice: '29,999',
-      discountedPrice: '22,499',
-      discount: '25% OFF',
-      image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop',
-      brand: 'Sony'
+      productName: 'JBL Live 660NC',
+      description: 'Keep The Noise Out, Or In. You Choose.',
+      originalPrice: '14,999',
+      discountedPrice: '9,999',
+      image: 'public/images/jbl-live-660-nc.png'
     },
     {
       id: 2,
       productName: 'Apple AirPods Pro',
-      description: 'Premium earbuds with active noise cancellation and spatial audio',
+      description: 'Premium Sound. Unmatched Comfort.',
       originalPrice: '21,900',
       discountedPrice: '18,999',
-      discount: '13% OFF',
-      image: 'https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500&h=500&fit=crop',
-      brand: 'Apple'
+      image: 'public/images/apple-airpods-pro.png'
     },
     {
       id: 3,
       productName: 'OnePlus Buds Pro',
-      description: 'True wireless earphones with superior sound and comfort',
+      description: 'True Wireless Freedom.',
       originalPrice: '12,999',
       discountedPrice: '9,999',
-      discount: '23% OFF',
-      image: 'https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=500&h=500&fit=crop',
-      brand: 'OnePlus'
+      image: 'public/images/oneplus-buds-pro.png'
     }
   ];
 
@@ -44,14 +38,6 @@ export default function Carousel() {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
 
   const goToSlide = (index) => {
     setCurrentSlide(index);
@@ -65,24 +51,27 @@ export default function Carousel() {
             key={slide.id}
             className={`carousel-slide ${index === currentSlide ? 'active' : ''}`}
           >
-            {/* Left Side - Product Info */}
+            {/* LEFT SIDE - All Product Info */}
             <div className="slide-left">
+              {/* 1. Product name - SMALL WHITE */}
               <div className="product-name">{slide.productName}</div>
+              
+              {/* 2. Description - LARGE WHITE */}
               <p className="product-description">{slide.description}</p>
               
+              {/* 3. Prices */}
               <div className="price-section">
-                <span className="original-price">₹{slide.originalPrice}</span>
                 <span className="discounted-price">₹{slide.discountedPrice}</span>
-                <span className="discount-badge">{slide.discount}</span>
+                <span className="original-price">₹{slide.originalPrice}</span>
               </div>
 
-              <button className="show-now-btn">Show Now</button>
+              {/* 4. Shop Now button */}
+              <button className="show-now-btn">Shop Now</button>
             </div>
 
-            {/* Right Side - Product Image */}
+            {/* RIGHT SIDE - Product Image Only */}
             <div className="slide-right">
-              <div className="product-emoji">{slide.emoji}</div>
-              <div className="product-brand">{slide.brand}</div>
+              <img src={slide.image} alt={slide.productName} className="slide-image" />
             </div>
           </div>
         ))}
