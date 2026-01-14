@@ -7,11 +7,11 @@ export default function Carousel() {
   const slides = [
     {
       id: 1,
-      productName: 'JBL Live 660NC',
+      productName: 'JBL Live 770NC',
       description: 'Keep The Noise Out, Or In. You Choose.',
       originalPrice: '14,999',
       discountedPrice: '9,999',
-      image: 'public/images/jbl-live-660-nc.png'
+      image: 'public/images/jbl-live-770-nc.png'
     },
     {
       id: 2,

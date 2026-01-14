@@ -1,11 +1,22 @@
 import { useCart } from "../context/CartContext";
 import CartItem from "./CartItem";
 import { useNavigate } from "react-router-dom";
+import EmptyCartPage from "./CartModal";
 import "./CartPage.css";
 
 export default function CartPage() {
   const { cartItems, getTotalPrice, getTotalOriginalPrice, getTotalDiscount, getCartCount } = useCart();
   const navigate = useNavigate();
+
+  if (cartItems.length === 0) {
+    return (
+      <div className="cart-page-container">
+        <div className="cart-empty-modal-wrapper">
+          <EmptyCartPage />
+        </div>
+      </div>
+    );
+  }
 
   const totalOriginalPrice = getTotalOriginalPrice();
   const totalDiscountedPrice = getTotalPrice();
@@ -17,21 +28,6 @@ export default function CartPage() {
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
     });
-  };
-
-  if (cartItems.length === 0) {
-    return (
-      <div className="cart-page-container">
-        <div className="empty-cart-section">
-          <div className="empty-cart-icon">🛒</div>
-          <h2>Your Cart is Empty</h2>
-          <p>Add some products to get started!</p>
-          <button className="continue-shopping-btn" onClick={() => navigate('/')}>
-            Continue Shopping
-          </button>
-        </div>
-      </div>
-    );
   }
 
   return (

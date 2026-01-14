@@ -15,7 +15,7 @@
 
 .delete-icon-btn {
   position: absolute;
-  top: 30px;
+  top: 18px;
   right: 0;
   background: none;
   border: none;
@@ -73,13 +73,13 @@
 
 .cart-item-prices {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   align-items: center;
 }
 
 .cart-item-discounted {
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 600;
   color: #fff;
 }
 
@@ -98,6 +98,7 @@
   border-radius: 4px;
   width: fit-content;
   overflow: hidden;
+  margin-top: 6px;
 }
 
 .qty-btn {

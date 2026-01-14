@@ -7,6 +7,8 @@ import TopProducts from './components/TopProducts'
 import Advantages from './components/Advantages'
 import Footer from './components/Footer'
 import CartPage from './components/CartPage'
+import AllProducts from './components/AllProducts'
+import ProductDetails from './components/ProductDetails'
 import './App.css'
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
             }
           />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/products" element={<AllProducts />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
         </Routes>
         <Footer />
       </Router>

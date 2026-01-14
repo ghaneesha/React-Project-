@@ -12,9 +12,9 @@ export default function TopProducts() {
   const allProducts = [
     { 
       id: 1, 
-      name: "JBL Live 660NC", 
+      name: "JBL Live 770NC", 
       type: "Headphones", 
-      image: "public/images/jbl-live-660-nc.png", 
+      image: "public/images/jbl-live-770-nc.png", 
       rating: 5, 
       discountedPrice: "9,999",
       price: "14,999", 
