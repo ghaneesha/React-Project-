@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import "./ProductDetails.css";
 
@@ -577,30 +577,34 @@ export default function ProductDetails() {
         <h2>Related Products</h2>
         <div className="related-products-grid">
           {relatedProducts.map((relatedProduct) => (
-            <div key={relatedProduct.id} className="related-product-card">
-              <div className="related-product-image">
-                <img src={relatedProduct.image} alt={relatedProduct.name} />
+            <Link key={relatedProduct.id} to={`/product/${relatedProduct.id}`} style={{ textDecoration: 'none' }}>
+              <div className="related-product-card" style={{ cursor: 'pointer' }}>
+                <div className="related-product-image">
+                  <img src={relatedProduct.image} alt={relatedProduct.name} />
+                </div>
+                {renderStars(relatedProduct.rating)}
+                <h3>{relatedProduct.name}</h3>
+                <p className="related-product-desc">{relatedProduct.description}</p>
+                <div className="related-product-prices">
+                  <span className="related-price">₹{formatPrice(relatedProduct.discountedPrice)}</span>
+                  <span className="related-original-price">₹{formatPrice(relatedProduct.price)}</span>
+                </div>
+                <button 
+                  className="related-add-btn"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    addToCart({
+                      ...relatedProduct,
+                      discountedPrice: formatPrice(relatedProduct.discountedPrice),
+                      price: formatPrice(relatedProduct.price)
+                    });
+                  }}
+                >
+                  Add to cart
+                </button>
               </div>
-              {renderStars(relatedProduct.rating)}
-              <h3>{relatedProduct.name}</h3>
-              <p className="related-product-desc">{relatedProduct.description}</p>
-              <div className="related-product-prices">
-                <span className="related-price">₹{formatPrice(relatedProduct.discountedPrice)}</span>
-                <span className="related-original-price">₹{formatPrice(relatedProduct.price)}</span>
-              </div>
-              <button 
-                className="related-add-btn"
-                onClick={() => {
-                  addToCart({
-                    ...relatedProduct,
-                    discountedPrice: formatPrice(relatedProduct.discountedPrice),
-                    price: formatPrice(relatedProduct.price)
-                  });
-                }}
-              >
-                Add to cart
-              </button>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
