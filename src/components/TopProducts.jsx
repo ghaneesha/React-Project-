@@ -22,26 +22,36 @@ export default function TopProducts() {
     },
     { 
       id: 2, 
-      name: "boAt Rockerz 480", 
-      type: "Headphones", 
-      image: "public/images/boat-rockerz-480.png", 
+      name: "Apple AirPods Pro", 
+      type: "Earbuds", 
+      image: "public/images/apple-airpods-pro.png", 
       rating: 5, 
-      discountedPrice: "1,299", 
-      price: "3,990", 
-      description: "On-Ear Wireless Headphones" 
+      discountedPrice: "18,999", 
+      price: "21,900", 
+      description: "Premium Sound. Unmatched Comfort." 
     },
     {
       id: 3,
-      name: "boAt Airdopes Prime 701", 
+      name: "OnePlus Buds Pro", 
       type: "Earbuds",
-      image: "public/images/boat-airdropes-prime-701.png",
+      image: "public/images/oneplus-buds-pro.png",
       rating: 5,
-      discountedPrice: "1,099", 
-      price: "2,990", 
-      description: "Wireless In-Ear Earbuds" 
+      discountedPrice: "9,999", 
+      price: "12,999", 
+      description: "True Wireless Earbuds" 
     },
     { 
       id: 4, 
+      name: "boAt Airdopes Prime 701", 
+      type: "Earbuds", 
+      image: "public/images/boat-airdropes-prime-701.png", 
+      rating: 5, 
+      discountedPrice: "1,074", 
+      price: "3,999", 
+      description: "Wireless In-Ear Earbuds" 
+    },
+    { 
+      id: 9, 
       name: "boAt BassHeads 100", 
       type: "Earphones", 
       image: "public/images/boat-bassheads-100.png", 
@@ -52,36 +62,16 @@ export default function TopProducts() {
     },
     { 
       id: 5, 
-      name: "boAt Rockerz 411", 
+      name: "boAt Rockerz 480", 
       type: "Headphones", 
-      image: "public/images/boat-rockerz-411.png", 
+      image: "public/images/boat-rockerz-480.png", 
       rating: 5, 
-      discountedPrice: "1,599", 
-      price: "2,999", 
-      description: "Bluetooth & Wired On-Ear Headphones" 
+      discountedPrice: "1,299", 
+      price: "3,990", 
+      description: "On-Ear Wireless Headphones" 
     },
     { 
       id: 6, 
-      name: "JBL Live 200BT", 
-      type: "Neckbands", 
-      image: "public/images/jbl-live-200-bt.png", 
-      rating: 4, 
-      discountedPrice: "3,699", 
-      price: "6,299", 
-      description: "In-Ear Wireless Neckbands" 
-    },
-    { 
-      id: 7, 
-      name: "Sony WH-XB910N", 
-      type: "Headphones", 
-      image: "public/images/Sony-WH-XB910N.png", 
-      rating: 4, 
-      discountedPrice: "13,489", 
-      price: "19,990", 
-      description: "Wireless Over-Ear Headphones" 
-    },
-    { 
-      id: 8, 
       name: "JBL Tune 760NC", 
       type: "Headphones", 
       image: "public/images/jbl-tune-760-nc.png", 
@@ -91,7 +81,7 @@ export default function TopProducts() {
       description: "Wireless Over-Ear NC Headphones" 
     },
     { 
-      id: 9, 
+      id: 7, 
       name: "boAt Rockerz 255", 
       type: "Neckbands", 
       image: "public/images/boat-rockerz-255.png",
@@ -99,6 +89,16 @@ export default function TopProducts() {
       discountedPrice: "899", 
       price: "2,990", 
       description: "In-Ear Wireless Neckbands" 
+    },
+    { 
+      id: 8, 
+      name: "boAt Rockerz 411", 
+      type: "Headphones", 
+      image: "public/images/boat-rockerz-411.png", 
+      rating: 5, 
+      discountedPrice: "1,599", 
+      price: "2,990", 
+      description: "Bluetooth & Wired On-Ear Headphones" 
     },
     { 
       id: 10, 
@@ -111,7 +111,27 @@ export default function TopProducts() {
       description: "In-Ear Truly Wireless Earbuds" 
     },
     { 
-      id: 11, 
+      id: 12, 
+      name: "JBL Live 200BT", 
+      type: "Neckbands", 
+      image: "public/images/jbl-live-200-bt.png", 
+      rating: 4, 
+      discountedPrice: "3,699", 
+      price: "6,299", 
+      description: "In-Ear Wireless Neckbands" 
+    },
+    { 
+      id: 13, 
+      name: "Sony WH-XB910N", 
+      type: "Headphones", 
+      image: "public/images/Sony-WH-XB910N.png", 
+      rating: 4, 
+      discountedPrice: "13,489", 
+      price: "19,990", 
+      description: "Wireless Over-Ear Headphones" 
+    },
+    { 
+      id: 15, 
       name: "Sony WF-1000XM4", 
       type: "Earbuds", 
       image: "public/images/Sony-WF-1000XM4.png", 

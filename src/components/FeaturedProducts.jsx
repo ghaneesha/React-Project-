@@ -11,36 +11,20 @@ export default function FeaturedProducts() {
       id: 1,
       name: "JBL Live 770NC",
       image: "public/images/jbl-live-770-nc.png",
-      originalPrice: "29,999",
-      discountedPrice: "22,499",
+      originalPrice: "14,999",
+      discountedPrice: "9,999",
       type: "Headphones"
     },
     {
       id: 2,
-      name: "boAt Airdopes Prime 701",
-      image: "public/images/boat-airdropes-prime-701.png",
-      originalPrice: "3,999",
-      discountedPrice: "1,074",
+      name: "Apple AirPods Pro",
+      image: "public/images/apple-airpods-pro.png",
+      originalPrice: "21,900",
+      discountedPrice: "18,999",
       type: "Earbuds"
     },
     {
       id: 3,
-      name: "boAt Rockerz 480",
-      image: "public/images/boat-rockerz-480.png",
-      originalPrice: "3,990",
-      discountedPrice: "1,299",
-      type: "Headphones"
-    },
-    {
-      id: 4,
-      name: "JBL Tune 760NC",
-      image: "public/images/jbl-tune-760-nc.png",
-      originalPrice: "17,999",
-      discountedPrice: "5,999",
-      type: "Headphones"
-    },
-    {
-      id: 5,
       name: "OnePlus Buds Pro",
       image: "public/images/oneplus-buds-pro.png",
       originalPrice: "12,999",
@@ -48,27 +32,43 @@ export default function FeaturedProducts() {
       type: "Earbuds"
     },
     {
+      id: 4,
+      name: "boAt Airdopes Prime 701",
+      image: "public/images/boat-airdropes-prime-701.png",
+      originalPrice: "3,999",
+      discountedPrice: "1,074",
+      type: "Earbuds"
+    },
+    {
+      id: 5,
+      name: "boAt Rockerz 480",
+      image: "public/images/boat-rockerz-480.png",
+      originalPrice: "3,990",
+      discountedPrice: "1,299",
+      type: "Headphones"
+    },
+    {
       id: 6,
-      name: "Boat Rockerz 255",
-      image: "public/images/boat-rockerz-255.png",
-      originalPrice: "4,999",
-      discountedPrice: "3,499",
-      type: "Neckbands"
+      name: "JBL Tune 760NC",
+      image: "public/images/jbl-tune-760-nc.png",
+      originalPrice: "7,999",
+      discountedPrice: "5,999",
+      type: "Headphones"
     },
     {
       id: 7,
-      name: "Realme Buds Air 7",
-      image: "public/images/realme-buds-air-7.png",
-      originalPrice: "6,999",
-      discountedPrice: "4,999",
-      type: "Earphones"
+      name: "boAt Rockerz 255",
+      image: "public/images/boat-rockerz-255.png",
+      originalPrice: "2,990",
+      discountedPrice: "899",
+      type: "Neckbands"
     },
     {
       id: 8,
-      name: "Bose SoundLink",
-      image: "public/images/bose-soundlink.png",
-      originalPrice: "35,999",
-      discountedPrice: "28,999",
+      name: "boAt Rockerz 411",
+      image: "public/images/boat-rockerz-411.png",
+      originalPrice: "2,990",
+      discountedPrice: "1,599",
       type: "Headphones"
     }
   ];
