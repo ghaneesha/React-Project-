@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Carousel.css';
 
 export default function Carousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const navigate = useNavigate();
 
   const slides = [
     {
@@ -66,7 +68,7 @@ export default function Carousel() {
               </div>
 
               {/* 4. Shop Now button */}
-              <button className="show-now-btn">Shop Now</button>
+              <button className="show-now-btn" onClick={() => navigate(`/product/${slide.id}`)}>Shop Now</button>
             </div>
 
             {/* RIGHT SIDE - Product Image Only */}

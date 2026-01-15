@@ -1,14 +1,16 @@
 import Slider from "react-slick";
+import { useNavigate } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./FeaturedProducts.css";
 
 export default function FeaturedProducts() {
+  const navigate = useNavigate();
   const products = [
     {
       id: 1,
-      name: "JBL Live 660NC",
-      image: "public/images/jbl-live-660-nc.png",
+      name: "JBL Live 770NC",
+      image: "public/images/jbl-live-770-nc.png",
       originalPrice: "29,999",
       discountedPrice: "22,499",
       type: "Headphones"
@@ -121,7 +123,7 @@ export default function FeaturedProducts() {
         <Slider {...settings}>
           {products.map((product) => (
             <div key={product.id}>
-              <div className="featured-product-card">
+              <div className="featured-product-card" onClick={() => navigate(`/product/${product.id}`)} style={{ cursor: 'pointer' }}>
                 <div className="featured-image-wrapper">
                   <img src={product.image} alt={product.name} className="featured-product-image" />
                 </div>
