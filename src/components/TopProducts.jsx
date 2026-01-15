@@ -51,7 +51,7 @@ export default function TopProducts() {
       description: "Wireless In-Ear Earbuds" 
     },
     { 
-      id: 9, 
+      id: 10, 
       name: "boAt BassHeads 100", 
       type: "Earphones", 
       image: "public/images/boat-bassheads-100.png", 
@@ -91,7 +91,7 @@ export default function TopProducts() {
       description: "In-Ear Wireless Neckbands" 
     },
     { 
-      id: 8, 
+      id: 11, 
       name: "boAt Rockerz 411", 
       type: "Headphones", 
       image: "public/images/boat-rockerz-411.png", 
@@ -101,7 +101,7 @@ export default function TopProducts() {
       description: "Bluetooth & Wired On-Ear Headphones" 
     },
     { 
-      id: 10, 
+      id: 14, 
       name: "JBL Wave 100", 
       type: "Earbuds", 
       image: "public/images/jbl-wave-100.png", 
@@ -141,7 +141,7 @@ export default function TopProducts() {
       description: "Wireless In-Ear NC Earbuds" 
     },
     { 
-      id: 12, 
+      id: 18, 
       name: "Browse All Products", 
       type: "browse", 
       image: "", 

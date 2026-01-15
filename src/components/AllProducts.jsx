@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import "./AllProducts.css";
 
@@ -8,6 +9,7 @@ export default function AllProducts() {
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [maxPrice, setMaxPrice] = useState(40000);
   const { addToCart } = useCart();
+  const navigate = useNavigate();
   const [addedProductId, setAddedProductId] = useState(null);
 
   const allProducts = [
@@ -181,7 +183,7 @@ export default function AllProducts() {
       <main className="products-main">
         <div className="products-grid-all">
           {sortedProducts.map((product) => (
-            <div key={product.id} className="product-card-all">
+            <div key={product.id} className="product-card-all" onClick={() => navigate(`/product/${product.id}`)} style={{ cursor: 'pointer' }}>
               <div className="product-image-container">
                 <img src={product.image} alt={product.name} />
               </div>
@@ -198,7 +200,10 @@ export default function AllProducts() {
 
               <button 
                 className={`btn-add-to-cart ${addedProductId === product.id ? "added" : ""}`}
-                onClick={() => handleAddToCart(product)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleAddToCart(product);
+                }}
               >
                 {addedProductId === product.id ? "✓ Added to Cart" : "Add to cart"}
               </button>

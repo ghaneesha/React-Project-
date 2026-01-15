@@ -64,7 +64,7 @@ export default function FeaturedProducts() {
       type: "Neckbands"
     },
     {
-      id: 8,
+      id: 11,
       name: "boAt Rockerz 411",
       image: "public/images/boat-rockerz-411.png",
       originalPrice: "2,990",
